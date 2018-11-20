@@ -1,0 +1,19 @@
+
+# Get the nginx webserver image
+FROM nginx
+
+# Install Jekyll
+
+RUN gem install jekyll
+
+WORKDIR /tmp/
+
+# Copy all files from local project to tmp working directory.
+COPY ./ /tmp/
+
+# Run jekyll build.  
+RUN jekyll build
+
+# Copy the output from container jekyll build to nginx web server 
+
+COPY /tmp/_site /usr/share/nginx/html

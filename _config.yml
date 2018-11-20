@@ -1,0 +1,24 @@
+exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor']
+# Site settings
+title: ownCloud Quickstart
+include:        [".htaccess"]
+exclude:        ["script", "vendor", "Gemfile", "Gemfile.lock", "config.ru", "Procfile", "Rakefile", "readme.md", "scss","dockerfile"]
+# permalink: /:categories/:year/:title
+# markdown_ext:   markdown,mkd,mkdn,md
+markdown: kramdown
+sass:
+    sass_dir: ./_sass
+gems:
+
+
+collections:
+  overview:
+    output: true
+  install-ocserver-docker:
+    output: true
+  ocserver-add-user:
+    output: true
+  owncloud-clients:
+    output: true
+  next-steps:
+    output: true
