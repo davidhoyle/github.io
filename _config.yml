@@ -1,3 +1,5 @@
+
+
 exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor']
 # Site settings
 title: ownCloud Quickstart
@@ -22,3 +24,5 @@ collections:
     output: true
   next-steps:
     output: true
+
+
