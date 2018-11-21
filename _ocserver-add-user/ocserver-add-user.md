@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Add ownCloud Users"
+title:  "Adding ownCloud Users"
 ---
 
 

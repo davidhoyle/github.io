@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Connect to ownCloud Using Desktop and Mobile Clients"
+title:  "Connecting to ownCloud Using Desktop and Mobile Clients"
 ---
 
 ## Connecting to ownCloud Using Desktop Clients
