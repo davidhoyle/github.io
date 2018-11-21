@@ -25,7 +25,7 @@ You can use the [ownCloud Docker image](https://hub.docker.com/r/owncloud/server
    cd owncloud-docker-server
    ```
 
-2. Run the following command to download the `docker-compose.yml` file from the ownCloud GitHub repository.
+2. Download the `docker-compose.yml` file from the ownCloud GitHub repository. For example:
 
    `wget https://raw.githubusercontent.com/owncloud-docker/server/master/docker-compose.yml`
 
@@ -59,7 +59,7 @@ You can use the [ownCloud Docker image](https://hub.docker.com/r/owncloud/server
 
    `docker-compose ps`
 
-   If they are all running, this command should return a response similar to the following:
+   If the containers are running, this command should return a response similar to the following:
 
    ```
     Name                     Command               State                     Ports
@@ -68,9 +68,9 @@ You can use the [ownCloud Docker image](https://hub.docker.com/r/owncloud/server
    server_owncloud_1   /usr/local/bin/entrypoint  ...   Up      0.0.0.0:8080->8080/tcp
    server_redis_1      /bin/s6-svscan /etc/s6           Up      6379/tcp
    ```
-   **Note**
+   **Note:**
    Even though all of the containers are running, it may take a few minutes for ownCloud to be fully functional. If you run `docker-compose logs --follow owncloud` and see a significant amount of information logging to the console, that indicates that the web UI may not be accessible yet.
 
-6. Use a browser to log in to the ownCloud UI at http://localhost:8080. Use the user name and password you specified in the `.env` file.
+6. Use a browser to log in to the ownCloud UI at http://localhost:8080. Enter the user name and password you specified in the `.env` file.
 
  ![ownCloud UI Login](../images/owncloud-server-login.png)
