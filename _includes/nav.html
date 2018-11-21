@@ -1,11 +1,5 @@
 <nav class="side">
 
- {% for document in site.overview %}
-   <li><a href="{{ document.url }}">{{ document.title }}</a>
-     <nav>
-     </nav>
-   </li>
- {% endfor %}
 
  {% for document in site.overview %}
    <li><a href="{{ document.url | relative_url }}">{{ document.title }}</a>
@@ -15,28 +9,28 @@
  {% endfor %}
 
  {% for document in site.install-ocserver-docker %}
-   <li><a href="{{ document.url }}">{{ document.title }}</a>
+   <li><a href="{{ document.url | relative_url }}">{{ document.title }}</a>
      <nav>
      </nav>
    </li>
  {% endfor %}
 
  {% for document in site.ocserver-add-user %}
-   <li><a href="{{ document.url }}">{{ document.title }}</a>
+   <li><a href="{{ document.url | relative_url }}">{{ document.title }}</a>
      <nav>
      </nav>
    </li>
  {% endfor %}
 
  {% for document in site.owncloud-clients %}
-   <li><a href="{{ document.url }}">{{ document.title }}</a>
+   <li><a href="{{ document.url | relative_url }}">{{ document.title }}</a>
      <nav>
      </nav>
    </li>
  {% endfor %}
 
  {% for document in site.next-steps %}
-   <li><a href="{{ document.url }}">{{ document.title }}</a>
+   <li><a href="{{ document.url | relative_url }}">{{ document.title }}</a>
      <nav>
      </nav>
    </li>
