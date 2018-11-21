@@ -13,8 +13,8 @@
   <script type="text/javascript" src='/assets/js/main.js'></script>
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/install-ocserver-docker/install-ocserver-docker.html">
-  <link rel="alternate" type="application/rss+xml" title="ownCloud Quickstart" href="http://localhost:4000/feed.xml" />
+  <link rel="canonical" href="/install-ocserver-docker/install-ocserver-docker.html">
+  <link rel="alternate" type="application/rss+xml" title="ownCloud Quickstart" href="/feed.xml" />
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -139,26 +139,114 @@
   <h2 id="prerequisites">Prerequisites</h2>
 
 <ul>
-  <li>Docker (link)</li>
-  <li>System Requirements</li>
+  <li><a href="https://docs.docker.com/install/">Docker</a></li>
+  <li><a href="https://docs.docker.com/compose/install/">Docker Compose</a></li>
+  <li>Review the ownCloud <a href="https://doc.owncloud.org/server/latest/admin_manual/installation/system_requirements.html">System Requirements</a></li>
 </ul>
 
 <h2 id="install-owncloud-using-docker">Install ownCloud Using Docker</h2>
 
+<p>You can use the <a href="https://hub.docker.com/r/owncloud/server/">ownCloud Docker image</a> to install ownCloud using Docker. This image is designed to work with a data volume in the host file system, and with separate MariaDB and Redis containers. This configuration:</p>
+
+<ul>
+  <li>Exposes port 8080 for HTTP connections</li>
+  <li>Mounts the data and MySQL data directories on the host for persistent storage</li>
+</ul>
+
 <ol>
   <li>
-    <p>Run the following commands to…</p>
+    <p>Run the following commands to create and switch to a new project directory.</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code> docker fooby dooby
+    <div class="highlighter-rouge"><pre class="highlight"><code>mkdir owncloud-docker-server
+cd owncloud-docker-server
 </code></pre>
     </div>
   </li>
   <li>
-    <p>Run the following command to:</p>
+    <p>Run the following command to download the <code class="highlighter-rouge">docker-compose.yml</code> file from the ownCloud GitHub repository.</p>
 
-    <p><code class="highlighter-rouge">docker yada yada</code></p>
+    <p><code class="highlighter-rouge">wget https://raw.githubusercontent.com/owncloud-docker/server/master/docker-compose.yml</code></p>
+  </li>
+  <li>
+    <p>Create a <code class="highlighter-rouge">.env</code> environment configuration file with the following required settings.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th><strong>Setting Name</strong></th>
+          <th><strong>Description</strong></th>
+          <th><strong>Example</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>OWNCLOUD_VERSION</td>
+          <td>The ownCloud version</td>
+          <td>latest</td>
+        </tr>
+        <tr>
+          <td>OWNCLOUD_DOMAIN</td>
+          <td>The ownCloud domain</td>
+          <td>localhost</td>
+        </tr>
+        <tr>
+          <td>ADMIN_USERNAME</td>
+          <td>Admin user name</td>
+          <td>admin</td>
+        </tr>
+        <tr>
+          <td>ADMIN_PASSWORD</td>
+          <td>Admin password</td>
+          <td>admin</td>
+        </tr>
+        <tr>
+          <td>HTTP_PORT</td>
+          <td>The HTTP port</td>
+          <td>8080</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>For example:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>cat &lt;&lt; EOF &gt; .env
+OWNCLOUD_VERSION=10.0
+OWNCLOUD_DOMAIN=localhost
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD=admin
+HTTP_PORT=8080
+EOF
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Build and start the container:</p>
+
+    <p><code class="highlighter-rouge">docker-compose up -d</code></p>
+  </li>
+  <li>
+    <p>When this process completes, run the following command to confirm that all of the containers have started successfully.</p>
+
+    <p><code class="highlighter-rouge">docker-compose ps</code></p>
+
+    <p>If they are all running, this command should return a response similar to the following:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> Name                     Command               State                     Ports
+-------------------------------------------------------------------------------------------------------
+server_db_1         /usr/bin/entrypoint /bin/s ...   Up      3306/tcp
+server_owncloud_1   /usr/local/bin/entrypoint  ...   Up      0.0.0.0:8080-&gt;8080/tcp
+server_redis_1      /bin/s6-svscan /etc/s6           Up      6379/tcp
+</code></pre>
+    </div>
+    <p><strong>Note</strong>
+Even though all of the containers are running, it may take a few minutes for ownCloud to be fully functional. If you run <code class="highlighter-rouge">docker-compose logs --follow owncloud</code> and see a significant amount of information logging to the console, that indicates that the web UI may not be accessible yet.</p>
+  </li>
+  <li>
+    <p>Use a browser to log in to the ownCloud UI at http://localhost:8080. Use the user name and password you specified in the <code class="highlighter-rouge">.env</code> file.</p>
   </li>
 </ol>
+
+<p><img src="../images/owncloud-server-login.png" alt="ownCloud UI Login" /></p>
 
 </article>
 
