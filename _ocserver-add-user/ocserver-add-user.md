@@ -3,10 +3,6 @@ layout: page
 title:  "Adding ownCloud Users"
 ---
 
-## Prerequisites
-
-* [Configure ownCloud Email](https://doc.owncloud.org/server/latest/admin_manual/configuration/server/email_configuration.html)
-
 ## Add a New User
 
 1. Click your user name at the top right of the ownCloud UI, then select **Users**.
@@ -17,9 +13,11 @@ title:  "Adding ownCloud Users"
 
    ![Add new user](../images/add-new-user.png)
 
-3. The new user appears in the list on the Users page, and an email with login information is sent to the new user.
+3. The new user appears in the list on the Users page. If you have [configured an email server](https://doc.owncloud.org/server/latest/admin_manual/configuration/server/email_configuration.html), an email with login information is sent to the new user.
 
    ![New user added](../images/new-user-added.png)
+
+## Reset a User's Password   
 
 **Related Information**
 
