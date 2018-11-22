@@ -13,7 +13,7 @@ title:  "Adding ownCloud Users"
 
    ![Select Users](../images/select-users.png)
 
-2. On the Users page, enter a user name and intial password for the new user, and optionally specify Groups assignments. Click **Create** to create the new user.
+2. On the Users page, enter a user name and email address for the new user, and optionally specify group assignments. Click **Create** to create the new user.
 
    ![Add new user](../images/add-new-user.png)
 
