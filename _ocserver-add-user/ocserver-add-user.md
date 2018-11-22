@@ -3,6 +3,8 @@ layout: page
 title:  "Adding ownCloud Users"
 ---
 
+**Note:** Only admin users can add or modify ownCloud users. 
+
 ## Add a New User
 
 1. Click your user name at the top right of the ownCloud UI, then select **Users**.
