@@ -17,7 +17,7 @@ title:  "Adding ownCloud Users"
 
    ![New user added](../images/new-user-added.png)
 
-## Reset a User's Password   
+## Reset a User Password   
 
 **Related Information**
 
