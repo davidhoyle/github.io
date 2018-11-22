@@ -3,6 +3,9 @@ layout: page
 title:  "Adding ownCloud Users"
 ---
 
+## Prerequisites
+
+* [Configure ownCloud Email](https://doc.owncloud.org/server/latest/admin_manual/configuration/server/email_configuration.html)
 
 ## Add a New User
 
