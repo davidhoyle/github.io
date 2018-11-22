@@ -20,4 +20,4 @@ title:  "Adding ownCloud Users"
 
 **Related Information**
 
-[User Management](https://doc.owncloud.org/server/latest/admin_manual/configuration/user/) guide.  
+* [ownCloud User Management Guide](https://doc.owncloud.org/server/latest/admin_manual/configuration/user/)  

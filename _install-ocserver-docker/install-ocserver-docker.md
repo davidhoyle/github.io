@@ -74,3 +74,8 @@ You can use the [ownCloud Docker image](https://hub.docker.com/r/owncloud/server
 6. Use a browser to log in to the ownCloud UI at http://localhost:8080. Enter the user name and password you specified in the `.env` file.
 
  ![ownCloud UI Login](../images/owncloud-server-login.png)
+
+**Related Information**
+
+* [ownCloud Server Installation Guide](https://doc.owncloud.org/server/latest/admin_manual/installation/)
+* [ownCloud Server Downloads](https://owncloud.org/download/)
