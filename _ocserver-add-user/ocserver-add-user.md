@@ -3,7 +3,7 @@ layout: page
 title:  "Adding ownCloud Users"
 ---
 
-**Note:** Only admin users can add or modify ownCloud users. 
+**Note:** Only admin users can add or modify ownCloud users.
 
 ## Add a New User
 
@@ -19,7 +19,15 @@ title:  "Adding ownCloud Users"
 
    ![New user added](../images/new-user-added.png)
 
-## Reset a User Password   
+## Reset a User Password
+
+1. Click the edit icon next to the user's password field.  name at the top right of the ownCloud UI, then select **Users**.
+
+   ![Edit password icon](../images/password-icon.png)
+
+2. Type in a new password, then press the Enter key. A message at the top of the page confirms that the password has been changed.  
+
+   ![Edit password](../images/password-edit.png)     
 
 **Related Information**
 
