@@ -29,7 +29,7 @@ You can use the [ownCloud Docker image](https://hub.docker.com/r/owncloud/server
 
    `wget https://raw.githubusercontent.com/owncloud-docker/server/master/docker-compose.yml`
 
-3. Create a `.env` environment configuration file with the following required settings.
+3. Create an .env configuration file with the following required settings.
 
    | **Setting Name**     | **Description**          | **Example** |
    |----------------------|--------------------------|-------------|
@@ -69,9 +69,9 @@ You can use the [ownCloud Docker image](https://hub.docker.com/r/owncloud/server
    server_redis_1      /bin/s6-svscan /etc/s6           Up      6379/tcp
    ```
    **Note:**
-   Even if all of the containers are running, it may take a few minutes for ownCloud to be fully functional. If you run `docker-compose logs --follow owncloud` and see a significant amount of information logging to the console, this indicates that the web UI may not be accessible yet.
+   Even if all of the containers are running, it may take a few minutes for ownCloud to be fully functional. If you run `docker-compose logs --follow owncloud` and see a significant amount of data logging to the console, this indicates that the web UI may not be accessible yet.
 
-6. Use a browser to log in to the ownCloud UI at http://<owncloud_domain>:8080. Enter the user name and password you specified in the `.env` file.
+6. Use a browser to log in to the ownCloud UI on port 8080 of the ownCloud server host (in this example, at http://localhost:8080). Enter the user name and password you specified in the .env file.
 
  ![ownCloud UI Login](../images/owncloud-server-login.png)
 
