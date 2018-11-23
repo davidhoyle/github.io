@@ -146,7 +146,7 @@
 
 <h2 id="install-owncloud-using-docker">Install ownCloud Using Docker</h2>
 
-<p>You can use the <a href="https://hub.docker.com/r/owncloud/server/">ownCloud Docker image</a> to install ownCloud using Docker. This image is designed to work with a data volume in the host file system, and with separate MariaDB and Redis containers. This configuration:</p>
+<p>You can use the <a href="https://hub.docker.com/r/owncloud/server/">ownCloud Docker image</a> to install ownCloud using Docker. This image is designed to work with a data volume on the host file system, and with separate MariaDB and Redis containers. This configuration:</p>
 
 <ul>
   <li>Exposes port 8080 for HTTP connections</li>
@@ -239,10 +239,10 @@ server_redis_1      /bin/s6-svscan /etc/s6           Up      6379/tcp
 </code></pre>
     </div>
     <p><strong>Note:</strong>
-Even if all of the containers are running, it may take a few minutes for ownCloud to be fully functional. If you run <code class="highlighter-rouge">docker-compose logs --follow owncloud</code> and see a significant amount of information logging to the console, that indicates that the web UI may not be accessible yet.</p>
+Even if all of the containers are running, it may take a few minutes for ownCloud to be fully functional. If you run <code class="highlighter-rouge">docker-compose logs --follow owncloud</code> and see a significant amount of information logging to the console, this indicates that the web UI may not be accessible yet.</p>
   </li>
   <li>
-    <p>Use a browser to log in to the ownCloud UI at http://localhost:8080. Enter the user name and password you specified in the <code class="highlighter-rouge">.env</code> file.</p>
+    <p>Use a browser to log in to the ownCloud UI at http://<owncloud_domain>:8080. Enter the user name and password you specified in the `.env` file.</owncloud_domain></p>
   </li>
 </ol>
 
