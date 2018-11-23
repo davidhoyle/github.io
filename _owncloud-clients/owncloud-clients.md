@@ -13,7 +13,7 @@ title:  "Connecting to ownCloud Using Desktop and Mobile Clients"
 
    ![Mac OS X install welcome](../images/mac-osx-install-successful.png)
 
-3. In the Applications folder, open **owncloud**. The owncloud connection wizard appears. Enter the ownCloud server address in the **Server Address** box, then click **Next**.
+3. In the Applications folder, open **owncloud**. The ownCloud connection wizard appears. Enter the ownCloud server address in the **Server Address** box, then click **Next**.
 
    ![Mac OS X install welcome](../images/owncloud-connection-wizard-server.png)
 
@@ -21,7 +21,7 @@ title:  "Connecting to ownCloud Using Desktop and Mobile Clients"
 
    ![Mac OS X install welcome](../images/owncloud-connection-wizard-creds.png)
 
-5. On the next screen, accept the default local folder options, then click **Connect** (you can adjust these settings later).
+5. On the next screen, accept the default local folder options, then click **Connect**.
 
    ![Mac OS X install welcome](../images/owncloud-connection-wizard-local-sync.png)   
 
@@ -33,7 +33,7 @@ title:  "Connecting to ownCloud Using Desktop and Mobile Clients"
 
    ![Mac OS X install welcome](../images/owncloud-local-folder.png)
 
-8. For more information, see [Using the Synchronization Client](https://doc.owncloud.org/desktop/latest/navigating.html)
+8. For more information, see [Using the Synchronization Client](https://doc.owncloud.org/desktop/latest/navigating.html).
 
 
 ### Windows
@@ -44,6 +44,6 @@ See [Installing the Desktop Synchronization Client](https://doc.owncloud.org/des
 
 The following resources provide information about ownCloud synchronization clients for iOS and Android devices.
 
-* [ownCloud Server Downloads](https://owncloud.org/download/)
+* [ownCloud Mobile App Downloads](https://owncloud.org/download/#owncloud-mobile-apps)
 * [ownCloud iOS App Manual](https://doc.owncloud.org/ios/ios_app.html)
 * [ownCloud Android App Manual](https://doc.owncloud.org/android/android_app.html)
