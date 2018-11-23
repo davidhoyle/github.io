@@ -21,11 +21,11 @@ title:  "Adding ownCloud Users"
 
 ## Reset a User Password
 
-1. Click the edit icon next to the user's password field.  name at the top right of the ownCloud UI, then select **Users**.
+1. Click the edit icon next to the user's password field.
 
    ![Edit password icon](../images/password-icon.png)
 
-2. Type in a new password, then press the Enter key. A message at the top of the page confirms that the password has been changed.  
+2. Type in a new password, then press the Enter key.  
 
    ![Edit password](../images/password-edit.png)     
 
