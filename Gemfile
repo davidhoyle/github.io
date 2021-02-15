@@ -6,6 +6,7 @@ gem 'compass'
 gem 'coffee-script'
 gem 'foreman'
 gem 'rack-jekyll'
+gem 'jekyll-remote-theme'
 
 # group :jekyll_plugins do
 #   gem 'algoliasearch-jekyll', '~> 0.8.0'
