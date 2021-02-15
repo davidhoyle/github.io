@@ -8,6 +8,7 @@ exclude:        ["script", "vendor", "Gemfile", "Gemfile.lock", "config.ru", "Pr
 # permalink: /:categories/:year/:title
 # markdown_ext:   markdown,mkd,mkdn,md
 markdown: kramdown
+remote_theme: pmarsceill/just-the-docs
 sass:
     sass_dir: ./_sass
 gems:
@@ -25,5 +26,5 @@ collections:
   next-steps:
     output: true
     
-remote_theme: pmarsceill/just-the-docs
+
 
